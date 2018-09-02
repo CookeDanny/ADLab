@@ -17,7 +17,7 @@ choco install -y GoogleChrome
 choco install -y WinRar
 
 # Disable Windows Defender realtime scanning before downloading Mimikatz
-If ($env:computername -eq "win10") {
+If ($env:computername -like "win10*") {
   If (Test-Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows Defender")
   {
     Remove-Item "HKLM:\SOFTWARE\Policies\Microsoft\Windows Defender" -Recurse -Force
