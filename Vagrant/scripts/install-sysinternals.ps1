@@ -45,7 +45,9 @@ Copy-Item $sysmonPath $sysmonDir
 Write-Host "Downloading SwiftOnSecurity's Sysmon config..."
 (New-Object System.Net.WebClient).DownloadFile('https://raw.githubusercontent.com/SwiftOnSecurity/sysmon-config/master/sysmonconfig-export.xml', "$sysmonConfigPath")
 # Alternative: Download Olaf Hartongs Sysmon config (more CPU intensive)
-# (New-Object System.Net.WebClient).DownloadFile('https://raw.githubusercontent.com/olafhartong/sysmon-modular/master/sysmonconfig.xml, "$sysmonConfigPath"
+# (New-Object System.Net.WebClient).DownloadFile('https://raw.githubusercontent.com/olafhartong/sysmon-modular/master/sysmonconfig.xml, "$sysmonConfigPath")
+# Alternative: Download ION-Storm Sysmon Config - forked from SwiftOnSecurity
+# (New-Object System.Net.WebClient).DownloadFile('https://github.com/ion-storm/sysmon-config/blob/master/sysmonconfig-export.xml', "$sysmonConfigPath")
 
 # Start Sysmon
 Write-Host "Starting Sysmon..."
