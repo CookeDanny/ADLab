@@ -8,7 +8,7 @@ If (-not (Test-Path "C:\ProgramData\chocolatey")) {
 }
 
 Write-Host "Installing Notepad++, Chrome, WinRar, PowerSploit and Mimikatz."
-If ($(hostname) -eq "win10") {
+If ($(hostname) -like "win10*") {
   # Because the Windows10 start menu sucks
   choco install -y classic-shell -installArgs ADDLOCAL=ClassicStartMenu
 }
